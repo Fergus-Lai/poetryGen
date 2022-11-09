@@ -5,10 +5,25 @@ const adverb = ["properly","loyally","readily","certainly","gleefully","nearly",
 
 document.addEventListener('DOMContentLoaded', (event) => {
     let button = document.getElementById("poet");    
+    let userButton = document.getElementById("userpoet");
     function poetry() {
-        sheet = document.getElementById("poem");
+        let sheet = document.getElementById("poem");
         newSentence = "The " + adjective[Math.floor(Math.random()*adjective.length)] + " " + noun[Math.floor(Math.random()*noun.length)] + " " + verb[Math.floor(Math.random()*verb.length)] + " " + adverb[Math.floor(Math.random()*adverb.length)] + "<br>";
         sheet.innerHTML += newSentence;
     };
     button.addEventListener("click",poetry);
+    
+    function userPoet() {
+        let sheet = document.getElementById("poem");
+        let userAdjective = document.getElementById("adjective").value;
+        let userNoun = document.getElementById("noun").value.split(" ");
+        let userVerb = document.getElementById("verb").value.split(" ");
+        let userAdverb = document.getElementById("adverb").value.split(" ");
+        newSentence = "The " + userAdjective[Math.floor(Math.random()*userAdjective.length)] + " " + userNoun[Math.floor(Math.random()*userNoun.length)] + " " + userVerb[Math.floor(Math.random()*userVerb.length)] + " " + userAdverb[Math.floor(Math.random()*userAdverb.length)] + "<br>";
+        sheet.innerHTML += newSentence;
+    }
+
+    button.addEventListener("click",poetry);
+    userButton.addEventListener("click",userPoet);
+
 })

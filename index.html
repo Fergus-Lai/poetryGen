@@ -24,7 +24,28 @@
         </header>
 
   <main>
-    <button type="button" class="btn btn-primary" id="poet">Generate Poem</button>
+    <div class="row">
+        <div class="col-3">
+            <div class="row my-2"><button type="button" class="btn btn-primary" id="poet">Generate Randomly</button></div>
+            <div class="row"><button type="button" class="btn btn-primary" id="userpoet">Generate From Entered Words</button></div>
+        </div>
+        <div class="col mx-2 my-2 align-content-center">
+            <div class="row text-center justify-content-center">Adjective</div>
+            <div class="row"><textarea class="form-control" id="adjective"></textarea></div>
+        </div>
+        <div class="col mx-2 my-2 align-content-center">
+            <div class="row text-center justify-content-center">Noun</div>
+            <div class="row"><textarea class="form-control" id="noun"></textarea></div>
+        </div>
+        <div class="col mx-2 my-2 align-content-center">
+            <div class="row text-center justify-content-center">Verb</div>
+            <div class="row"><textarea class="form-control" id="verb"></textarea></div>
+        </div>
+        <div class="col mx-2 my-2 align-content-center">
+            <div class="row text-center justify-content-center">Adverb</div>
+            <div class="row"><textarea class="form-control" id="adverb"></textarea></div>
+        </div>
+    </div>
     <div class="pt-5 my-5 border-top" id="poem"></div>
   </main>
   <footer class="pt-5 my-5 text-muted border-top">
